@@ -26,3 +26,7 @@ document.addEventListener('keydown', e => {
     }, 500);
   }
 });
+
+document.querySelectorAll('.shot img').forEach(img => {
+  img.addEventListener('error', () => img.closest('.shot').classList.add('missing'));
+});

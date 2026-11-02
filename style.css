@@ -22,3 +22,9 @@ a{color:var(--acc)}
 .badge.preview{background:#9e6a03}
 .badge.ga{background:#1f6feb}
 @media print{header{position:static}body{background:#fff;color:#000}section{break-inside:avoid;background:#fff}}
+.shot{margin:1rem 0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#0d1117}
+.shot img{display:block;width:100%;height:auto}
+.shot figcaption{font-size:.8rem;color:var(--mut);padding:.4rem .8rem}
+.shot.missing{border-style:dashed;padding:1rem;text-align:center;color:var(--mut)}
+.shot.missing img{display:none}
+@media print{.shot{break-inside:avoid;background:#fff}}
