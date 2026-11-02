@@ -26,3 +26,9 @@ document.addEventListener('keydown', e => {
     }, 500);
   }
 });
+
+document.querySelectorAll('.shot img').forEach(img => {
+  const markMissing = () => img.closest('.shot').classList.add('missing');
+  img.addEventListener('error', markMissing);
+  if (img.complete && img.naturalWidth === 0) markMissing();
+});
