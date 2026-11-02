@@ -15,5 +15,6 @@ for (const { url, file } of shots) {
     console.log('ok  ', file, url);
   } catch (e) {
     console.error('FAIL', file, url, e.message);
+    process.exitCode = 1;
   }
 }

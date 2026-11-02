@@ -26,5 +26,5 @@ a{color:var(--acc)}
 .shot img{display:block;width:100%;height:auto}
 .shot figcaption{font-size:.8rem;color:var(--mut);padding:.4rem .8rem}
 .shot.missing{border-style:dashed;padding:1rem;text-align:center;color:var(--mut)}
-.shot.missing img{display:none}
-@media print{.shot{break-inside:avoid;background:#fff}}
+.shot.missing img{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media print{.shot{break-inside:avoid;background:#fff}.shot figcaption{color:#444}.shot figcaption a{color:#0645ad}}
