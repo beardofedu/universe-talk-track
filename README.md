@@ -11,12 +11,14 @@ The two HTML pages share `style.css`, `app.js`, and `assets/`. When updating pre
 
 ## Images
 
-Each section has a `<figure class="shot">` showing official product imagery from the GitHub changelog post linked in its caption. `data-img` holds the original image URL and `<img src>` the local copy in `assets/`; until the file exists a dashed placeholder is shown. To re-download them:
+Product sections include `<figure class="shot">` elements showing official product imagery from the GitHub changelog post linked in each caption. `data-img` holds the original image URL and `<img src>` the local copy in `assets/`; until the file exists a dashed placeholder is shown. To re-download them:
 
 ```
 node scripts/fetch-images.mjs
 ```
 
 Swap any image manually (update `src` if the file type changes) if a different shot reads better on stage.
+
+Both presentations also include four space-themed illustrations made with Copilot image generation: mission control for the app, Projects, and Automations; a multi-engine ship for Fusion; cargo inspection for code review and security; and an orbital studio for image generation and desktop automation. These use `<figure class="shot generated">`, descriptive alt text, and captions identifying them as conceptual artwork rather than product screenshots. The optimized local JPEGs are named `assets/*-art.jpg`; `fetch-images.mjs` leaves them untouched because they have no `data-img` source.
 
 Items marked `*` need fact-checking against the official changelog/blog before presenting.
