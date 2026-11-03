@@ -10,8 +10,11 @@
 <header>
   <h1>GitHub Universe 2026 Ships</h1>
   <p class="tag">From coding assistant to agentic software delivery — “finished work, not just code.”</p>
-  <nav id="toc"></nav>
-  <p class="hint">Keys: <kbd>←</kbd>/<kbd>→</kbd> jump between sections</p>
+  <nav aria-label="Slide navigation" hidden>
+    <label for="slide-select">Jump to topic</label>
+    <select id="slide-select"></select>
+  </nav>
+  <p class="hint">Keys: <kbd>←</kbd>/<kbd>→</kbd> change slides · <kbd>Home</kbd>/<kbd>End</kbd> first/last slide</p>
 </header>
 
 <main>
@@ -188,6 +191,11 @@
 </section>
 
 </main>
+<footer class="slide-controls" aria-label="Slideshow controls" hidden>
+  <button id="previous-slide" type="button" aria-controls="slides">Previous</button>
+  <span id="slide-status" role="status" aria-live="polite" aria-atomic="true"></span>
+  <button id="next-slide" type="button" aria-controls="slides">Next</button>
+</footer>
 <script src="app.js"></script>
 </body>
 </html>

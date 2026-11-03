@@ -28,3 +28,61 @@ a{color:var(--acc)}
 .shot.missing{border-style:dashed;padding:1rem;text-align:center;color:var(--mut)}
 .shot.missing img{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 @media print{.shot{break-inside:avoid;background:#fff}.shot figcaption{color:#444}.shot figcaption a{color:#0645ad}}
+
+/* The participant deck is enhanced by JS; the facilitator stays a scrolling talk track. */
+body.slideshow{height:100dvh;display:grid;grid-template-rows:auto minmax(0,1fr) auto;overflow:hidden}
+.slideshow header{position:static;max-width:none;width:100%;padding:.75rem 2rem;display:grid;grid-template-columns:1fr auto;column-gap:2rem;align-items:center}
+.slideshow h1{font-size:1.25rem}
+.slideshow .tag{font-size:.85rem;margin:0}
+.slideshow header nav{grid-column:2;grid-row:1 / 3;display:flex;align-items:center;gap:.6rem;font-size:.8rem}
+.slideshow header label{white-space:nowrap}
+.slideshow select,.slide-controls button{font:inherit;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:6px;padding:.45rem .7rem}
+.slideshow select{max-width:22rem;width:100%;min-width:0}
+.slideshow .hint{grid-column:1 / -1;margin:.25rem 0 0}
+.slideshow main{max-width:1600px;width:100%;height:100%;min-height:0;margin:0 auto;padding:1rem 2rem}
+.slideshow section{height:100%;margin:0;padding:clamp(1rem,2vw,2rem);display:flex;flex-direction:column;gap:.6rem;overflow:auto;scroll-margin:0}
+.slideshow section[hidden]{display:none}
+.slideshow h2{font-size:clamp(1.4rem,2.4vw,2.3rem);line-height:1.2;margin:0}
+.slideshow .badge{align-self:flex-start;flex-shrink:0}
+.slide-content{display:grid;grid-template-columns:1.1fr 1fr;gap:2rem;flex:1;min-height:0}
+.slide-content.text-only{grid-template-columns:1fr}
+.slide-copy{align-self:center;font-size:clamp(1rem,1.65vw,1.55rem);line-height:1.5}
+.slide-copy ul,.slide-copy ol{margin:.5rem 0;padding-left:1.4em}
+.slide-copy li + li{margin-top:.55em}
+.slide-media{display:flex;flex-direction:column;gap:.6rem;min-height:0}
+.slideshow .shot{margin:0;min-height:0;flex:1;display:flex;flex-direction:column}
+.slideshow .shot img{min-height:0;flex:1;object-fit:contain}
+.slideshow .shot figcaption{flex-shrink:0;font-size:.7rem;line-height:1.35}
+.slideshow .src{flex-shrink:0;margin:0;font-size:.72rem;line-height:1.4}
+.slideshow #sources .slide-copy{font-size:clamp(.85rem,1.15vw,1.1rem);align-self:start}
+.slideshow #sources li + li{margin-top:.3em}
+.slide-controls{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.5rem 2rem .85rem}
+.slide-controls[hidden]{display:none}
+.slide-controls button{cursor:pointer}
+.slide-controls button:disabled{opacity:.4;cursor:default}
+#slide-status{text-align:center;color:var(--mut);font-size:.85rem}
+.slideshow :focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+@media(max-width:700px),(max-height:600px){
+  .slideshow header{display:block;padding:.6rem 1rem}
+  .slideshow header nav{margin-top:.4rem}
+  .slideshow .tag,.slideshow .hint{display:none}
+  .slideshow main{padding:.5rem 1rem}
+  .slideshow section{gap:.5rem}
+  .slide-content{display:block;flex:none;min-height:auto}
+  .slide-media{margin-top:1rem}
+  .slideshow .shot{flex:none}
+  .slideshow .shot + .shot{margin-top:.6rem}
+  .slideshow .shot img{flex:none;max-height:40dvh}
+  .slide-controls{padding:.5rem 1rem}
+}
+@media print{
+  body.slideshow{display:block;height:auto;overflow:visible}
+  .slideshow header{display:block}
+  .slideshow header nav,.slideshow .hint,.slide-controls{display:none}
+  .slideshow main{max-width:none;height:auto;padding:0}
+  .slideshow section,.slideshow section[hidden]{display:block;height:auto;overflow:visible;break-after:page;margin:1rem 0}
+  .slide-content{display:block}
+  .slide-media{display:block}
+  .slideshow .shot{display:block;margin:1rem 0}
+  .slideshow .shot img{max-height:30vh;flex:none}
+}
