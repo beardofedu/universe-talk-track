@@ -24,7 +24,7 @@
   <ul>
     <li>Theme: velocity, intelligence, quality across the whole SDLC</li>
     <li>Agent sessions follow you across app, VS Code, CLI, and web</li>
-    <li>Today's buckets: App &amp; orchestration · Models · Review &amp; security · Platform · Enterprise &amp; billing · What to do Monday</li>
+    <li>Today's buckets: App, Canvases &amp; Projects · Models · Review &amp; security · Platform · Enterprise &amp; billing · What to do Monday</li>
   </ul>
 </section>
 
@@ -33,37 +33,59 @@
   <span class="badge">New</span>
   <ul>
     <li>Start a cloud agent session on any device, continue it anywhere (app, VS Code, CLI, web)</li>
-    <li>Hosts Projects and Automations (below)</li>
+    <li><strong>My work:</strong> start sessions from an issue, pull request, prompt, or earlier session across all connected repositories; Copilot CLI sessions show up here too</li>
+    <li><strong>Parallel sessions:</strong> each runs on its own git worktree and branch</li>
+    <li><strong>Verify, then ship:</strong> review the plan and diff, test in the integrated terminal and browser, open a PR that uses your existing checks; Agent Merge can address review comments, fix failing checks, and merge when your conditions are met</li>
+    <li>Hosts Canvases, Projects, and Automations (next sections)</li>
     <li>Connectors: Vercel, Cloudflare, Sentry and others authenticate once across app, CLI, and web</li>
   </ul>
   <figure class="shot" data-url="https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/" data-img="https://github.blog/wp-content/uploads/2026/11/683326413-6c3e6093-4c88-4c7c-9c8d-3e30f57e6bcd.jpg">
     <img src="assets/app.jpg" alt="The same Copilot session and pull request synced between github.com and GitHub Mobile" loading="lazy">
     <figcaption>Changelog: Work from anywhere with a new connected Copilot cloud experience. <a href="https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/">Source</a></figcaption>
   </figure>
-  <p class="src">Source: <a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/">Changelog: GitHub Copilot app, Universe releases</a> · <a href="https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/">Changelog: Work from anywhere</a></p>
+  <p class="src">Source: <a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/">Changelog: GitHub Copilot app, Universe releases</a> · <a href="https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/">Changelog: Work from anywhere</a> · <a href="https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app/">Changelog: Expanded app availability</a></p>
+</section>
+
+<section id="canvases">
+  <h2>3. Canvases</h2>
+  <span class="badge">New</span>
+  <ul>
+    <li><strong>What it is:</strong> a structured, interactive surface over a work object — a plan, pull request, browser session, terminal, release checklist, triage board, incident, spreadsheet, or dashboard — open beside the chat</li>
+    <li><strong>Bidirectional:</strong> the agent updates the canvas as it works; you edit, reorder, approve, or redirect on the same surface</li>
+    <li><strong>Three participants:</strong> you inspect and steer, the agent reads state and takes structured actions, and the app connects the canvas to the real artifact and enforces which actions are allowed</li>
+    <li><strong>Chat still matters:</strong> chat is for intent and ambiguity; the canvas is where that intent becomes visible work you can verify</li>
+    <li><strong>Get one:</strong> browse featured canvases under <strong>Customize › Canvas</strong>; some arrive through plugins (for example, Azure DevOps, or the GitHub Security extension for code scanning alerts)</li>
+    <li><strong>Build one:</strong> type <code>/create-canvas</code> in a session and describe the workflow</li>
+  </ul>
+  <p class="src">Source: <a href="https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app/">Changelog: Expanded app availability — Canvases</a> · <a href="https://docs.github.com/copilot/how-tos/github-copilot-app/working-with-canvas-extensions">Docs: Working with canvas extensions</a></p>
 </section>
 
 <section id="projects">
-  <h2>3. Copilot Projects &amp; Automations</h2>
-  <span class="badge preview">Public preview*</span>
+  <h2>4. Copilot Projects &amp; Automations</h2>
+  <span class="badge preview">Public preview</span>
   <figure class="shot generated">
     <img src="assets/orchestration-art.jpg" alt="Robot mission control coordinates a fleet of task-carrying spacecraft between a laptop, terminal, and cloud station" width="1672" height="941" loading="lazy" decoding="async">
     <figcaption><strong>Mission control for your work.</strong> The app, Projects, and Automations help coordinate agent sessions across devices and repositories. AI-generated conceptual illustration, not product UI.</figcaption>
   </figure>
   <ul>
-    <li><strong>Projects:</strong> coordinate agent sessions across repositories with one place to oversee and redirect</li>
-    <li><strong>Automations:</strong> reusable tasks run on triggers, schedules, or on demand; can propose improvements from outcomes; new tools, triggers, and cost controls</li>
-    <li>Good fits: dependency chores, release notes, triage, docs drift</li>
+    <li><strong>Give Copilot a goal:</strong> describe the outcome and constraints; Copilot runs as many agent sessions as the work needs and brings back results, such as pull requests, for review</li>
+    <li><strong>Spans repos — or none:</strong> add one or more repositories, or start without one for research, planning, or launch work</li>
+    <li><strong>Library:</strong> shared context — your files under <em>User</em>, agent-created artifacts under <em>Agent</em></li>
+    <li><strong>Overview:</strong> work grouped as <em>Needs input</em>, <em>Open</em>, <em>Working</em>, and <em>Done</em>; open any session to review or steer it</li>
+    <li><strong>Connected context:</strong> Slack threads, Figma designs, and meeting notes alongside the code</li>
+    <li><strong>Project automations:</strong> ask in the project chat for recurring work; manage it from the <em>Automations</em> tab</li>
+    <li><strong>Standalone Automations:</strong> reusable tasks on triggers, schedules, or on demand; can propose improvements from outcomes; new tools, triggers, and cost controls; cloud automations run even when your laptop is asleep</li>
+    <li>Focused change in one repo? Start a session from that repo. Broader, evolving goal? Start a project.</li>
   </ul>
   <figure class="shot" data-url="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/#give-copilot-a-goal" data-img="https://github.com/user-attachments/assets/37b3573f-d42f-439f-a136-9613293cf984">
     <img src="assets/projects.jpg" alt="Copilot app showing the new left navigation with a Projects view" loading="lazy">
     <figcaption>Changelog: GitHub Copilot app, Universe releases — Projects. <a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/#give-copilot-a-goal">Source</a></figcaption>
   </figure>
-  <p class="src">Source: <a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/">Changelog: Copilot app, Universe releases</a></p>
+  <p class="src">Source: <a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/">Changelog: Copilot app, Universe releases</a> · <a href="https://docs.github.com/copilot/how-tos/github-copilot-app/working-with-projects">Docs: Working with projects</a></p>
 </section>
 
 <section id="fusion">
-  <h2>4. Copilot Fusion</h2>
+  <h2>5. Copilot Fusion</h2>
   <span class="badge ga">GA*</span>
   <figure class="shot generated">
     <img src="assets/fusion-art.jpg" alt="A robot navigator routes three colorful spacecraft engines toward different task planets" width="1672" height="941" loading="lazy" decoding="async">
@@ -83,7 +105,7 @@
 </section>
 
 <section id="review">
-  <h2>5. Code review: Max tier</h2>
+  <h2>6. Code review: Max tier</h2>
   <span class="badge preview">Preview*</span>
   <ul>
     <li>GitHub reports the highest F1 score for high-severity issues</li>
@@ -99,7 +121,7 @@
 </section>
 
 <section id="security">
-  <h2>6. Security &amp; code quality</h2>
+  <h2>7. Security &amp; code quality</h2>
   <figure class="shot generated">
     <img src="assets/review-security-art.jpg" alt="Two robot astronauts inspect code cargo with a magnifying glass and intercept mischievous bugs with a glowing shield" width="1672" height="941" loading="lazy" decoding="async">
     <figcaption><strong>Inspect the cargo before launch.</strong> Code review and security checks belong in the delivery loop. AI-generated conceptual illustration, not product UI or a guarantee of protection.</figcaption>
@@ -118,7 +140,7 @@
 </section>
 
 <section id="creative">
-  <h2>7. Image generation &amp; desktop automation</h2>
+  <h2>8. Image generation &amp; desktop automation</h2>
   <span class="badge preview">Public preview</span>
   <figure class="shot generated">
     <img src="assets/creative-art.jpg" alt="A robot artist paints a planet out of a picture frame while a desktop robot arm works beside an astronaut-operated approval button" width="1672" height="941" loading="lazy" decoding="async">
@@ -136,7 +158,7 @@
 </section>
 
 <section id="platform">
-  <h2>8. Platform &amp; workflow improvements</h2>
+  <h2>9. Platform &amp; workflow improvements</h2>
   <ul>
     <li>Workflow lockfiles and multi-cloud compute for reliability</li>
     <li>Role-based moderation for GitHub Issues; issue artifacts</li>
@@ -148,7 +170,7 @@
 </section>
 
 <section id="enterprise">
-  <h2>9. Enterprise &amp; pricing</h2>
+  <h2>10. Enterprise &amp; pricing</h2>
   <ul>
     <li>GitHub Enterprise reported to include Copilot features (app, automations, code review) without a separate Copilot subscription</li>
     <li>Shift toward AI usage-based billing (AI credits) and per-user budgets; the individual Copilot Max plan offers more included credits</li>
@@ -161,9 +183,10 @@
 </section>
 
 <section id="monday">
-  <h2>10. What to do Monday</h2>
+  <h2>11. What to do Monday</h2>
   <ol>
     <li>Try the Copilot app with one real issue, end to end</li>
+    <li>Start a Copilot Project for one cross-repo or research goal, and open a canvas while you work</li>
     <li>Pilot one Automation on a low-risk chore</li>
     <li>Enable AI push protection and try AI Scan on a non-CodeQL repo</li>
     <li>Use Max review on one high-risk service</li>
@@ -176,6 +199,9 @@
   <ul>
     <li><a href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/">GitHub Blog — Universe 2026: Evolving every layer of the stack</a></li>
     <li><a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/">Changelog — GitHub Copilot app, Universe releases</a></li>
+    <li><a href="https://docs.github.com/copilot/how-tos/github-copilot-app/working-with-projects">Docs — Working with projects in the Copilot app</a></li>
+    <li><a href="https://github.blog/changelog/2026-06-02-expanded-technical-preview-availability-for-the-github-copilot-app/">Changelog — Expanded Copilot app availability (Canvases)</a></li>
+    <li><a href="https://docs.github.com/copilot/how-tos/github-copilot-app/working-with-canvas-extensions">Docs — Working with canvas extensions</a></li>
     <li><a href="https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/">Changelog — Copilot Fusion</a></li>
     <li><a href="https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/">Changelog — Copilot code review: Max and approvals</a></li>
     <li><a href="https://github.blog/changelog/2026-10-28-code-scanning-for-ai-applications-in-public-preview/">Changelog — Code scanning for AI applications (public preview)</a></li>
