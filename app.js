@@ -13,11 +13,12 @@ const go = d => {
 };
 let start = null, tick = null;
 const timer = document.getElementById('timer');
+const participant = document.body.classList.contains('participant');
 document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') go(1);
   else if (e.key === 'ArrowLeft') go(-1);
-  else if (e.key.toLowerCase() === 'n') document.body.classList.toggle('hide-notes');
-  else if (e.key.toLowerCase() === 't') {
+  else if (!participant && e.key.toLowerCase() === 'n') document.body.classList.toggle('hide-notes');
+  else if (!participant && e.key.toLowerCase() === 't') {
     if (tick) { clearInterval(tick); tick = null; timer.hidden = true; return; }
     start = Date.now(); timer.hidden = false;
     tick = setInterval(() => {
