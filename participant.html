@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub Universe 2026 Ships — Participant Presentation</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="participant">
+<header>
+  <h1>GitHub Universe 2026 Ships</h1>
+  <p class="tag">From coding assistant to agentic software delivery — “finished work, not just code.”</p>
+  <nav id="toc"></nav>
+  <p class="hint">Keys: <kbd>←</kbd>/<kbd>→</kbd> jump between sections</p>
+</header>
+
+<main>
+
+<section id="opener">
+  <h2>1. Opener: the big shift</h2>
+  <ul>
+    <li>Theme: velocity, intelligence, quality across the whole SDLC</li>
+    <li>Agent sessions follow you across app, VS Code, CLI, and web</li>
+    <li>Today's buckets: App &amp; orchestration · Models · Review &amp; security · Platform · Enterprise &amp; billing · What to do Monday</li>
+  </ul>
+</section>
+
+<section id="app">
+  <h2>2. GitHub Copilot app</h2>
+  <span class="badge">New</span>
+  <ul>
+    <li>Start a cloud agent session on any device, continue it anywhere (app, VS Code, CLI, web)</li>
+    <li>Hosts Projects and Automations (below)</li>
+    <li>Connectors: Vercel, Cloudflare, Sentry and others authenticate once across app, CLI, and web</li>
+  </ul>
+  <figure class="shot" data-url="https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/" data-img="https://github.blog/wp-content/uploads/2026/11/683326413-6c3e6093-4c88-4c7c-9c8d-3e30f57e6bcd.jpg">
+    <img src="assets/app.jpg" alt="The same Copilot session and pull request synced between github.com and GitHub Mobile" loading="lazy">
+    <figcaption>Changelog: Work from anywhere with a new connected Copilot cloud experience. <a href="https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/">Source</a></figcaption>
+  </figure>
+  <p class="src">Source: <a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/">Changelog: GitHub Copilot app, Universe releases</a> · <a href="https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/">Changelog: Work from anywhere</a></p>
+</section>
+
+<section id="projects">
+  <h2>3. Copilot Projects &amp; Automations</h2>
+  <span class="badge preview">Public preview*</span>
+  <ul>
+    <li><strong>Projects:</strong> coordinate agent sessions across repositories with one place to oversee and redirect</li>
+    <li><strong>Automations:</strong> reusable tasks run on triggers, schedules, or on demand; can propose improvements from outcomes; new tools, triggers, and cost controls</li>
+    <li>Good fits: dependency chores, release notes, triage, docs drift</li>
+  </ul>
+  <figure class="shot" data-url="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/#give-copilot-a-goal" data-img="https://github.com/user-attachments/assets/37b3573f-d42f-439f-a136-9613293cf984">
+    <img src="assets/projects.jpg" alt="Copilot app showing the new left navigation with a Projects view" loading="lazy">
+    <figcaption>Changelog: GitHub Copilot app, Universe releases — Projects. <a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/#give-copilot-a-goal">Source</a></figcaption>
+  </figure>
+  <p class="src">Source: <a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/">Changelog: Copilot app, Universe releases</a></p>
+</section>
+
+<section id="fusion">
+  <h2>4. Copilot Fusion</h2>
+  <span class="badge ga">GA*</span>
+  <ul>
+    <li>Effort levels: Standard, High, Max</li>
+    <li>Orchestrates models per subtask (single, cascade, critique workflows); admins can set model policy and defaults</li>
+    <li>GitHub benchmark claims: Fusion Max scores close to a leading single model at roughly half the API cost and ~40% faster per task</li>
+    <li>Surfaces: VS Code, Copilot app, Copilot CLI, JetBrains</li>
+  </ul>
+  <figure class="shot" data-url="https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/" data-img="https://github.blog/wp-content/uploads/2026/11/683297831-90d4b889-b7d4-4473-93fc-e75bb8595652.png">
+    <img src="assets/fusion.png" alt="Copilot prompt composer with the Copilot Fusion menu open and the Max effort level selected" loading="lazy">
+    <figcaption>Changelog: Route and orchestrate models with Copilot Fusion. <a href="https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/">Source</a></figcaption>
+  </figure>
+  <p class="src">Source: <a href="https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/">Changelog: Route and orchestrate models with Copilot Fusion</a></p>
+</section>
+
+<section id="review">
+  <h2>5. Code review: Max tier</h2>
+  <span class="badge preview">Preview*</span>
+  <ul>
+    <li>GitHub reports the highest F1 score for high-severity issues</li>
+    <li>Use Max on risky paths (auth, payments, infra); keep Balanced elsewhere</li>
+    <li>Copilot can now act as reviewer <em>and</em> approver; approvals reset when new commits are pushed; configurable at repo/org/enterprise level</li>
+    <li>Related: pull request stacks to break big PRs into smaller linked reviews</li>
+  </ul>
+  <figure class="shot" data-url="https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/" data-img="https://github.blog/wp-content/uploads/2026/11/683060765-43cffe61-3c1c-47b7-9067-57635b1b60e4.png">
+    <img src="assets/review.png" alt="Copilot approving a pull request, with the reviewer menu open showing Lite, Balanced, and Max review levels" loading="lazy">
+    <figcaption>Changelog: Copilot code review — Max and approvals. <a href="https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/">Source</a></figcaption>
+  </figure>
+  <p class="src">Source: <a href="https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/">Changelog: Max and approvals</a> · <a href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/">Blog: Universe 2026 — Evolving every layer of the stack</a></p>
+</section>
+
+<section id="security">
+  <h2>6. Security &amp; code quality</h2>
+  <ul>
+    <li><strong>Security extension:</strong> review code and agent-generated work next to code scanning alerts in one interface</li>
+    <li><strong>AI Scan:</strong> find vulnerabilities in any language (beyond CodeQL), hand fixes to Copilot; code scanning for AI applications is in public preview</li>
+    <li><strong>AI push protection:</strong> blocks unstructured secrets like passwords at push time — for humans and agents alike</li>
+    <li>Expanded enhanced code scanning and monitoring for enterprises and AI-generated code</li>
+  </ul>
+  <figure class="shot" data-url="https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app/" data-img="https://github.blog/wp-content/uploads/2026/11/679056306-3aa8eb70-0db8-486a-8009-572eccef3284.jpg">
+    <img src="assets/security.jpg" alt="The Security extension in the Copilot app next to a session, with options to start a security review and view code scanning findings" loading="lazy">
+    <figcaption>Changelog: Security extension for the GitHub Copilot app. <a href="https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app/">Source</a></figcaption>
+  </figure>
+  <p class="src">Source: <a href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/">Blog: Evolving every layer of the stack</a> · <a href="https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app/">Changelog: Security extension</a></p>
+</section>
+
+<section id="creative">
+  <h2>7. Image generation &amp; desktop automation</h2>
+  <span class="badge preview">Public preview</span>
+  <ul>
+    <li>Image generation and editing from chat</li>
+    <li>Desktop automation with explicit user approval</li>
+  </ul>
+  <figure class="shot" data-url="https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/" data-img="https://github.blog/wp-content/uploads/2026/10/Changelog_Header_NewRelease_GenerateImagesCopilotApp.jpg">
+    <img src="assets/creative.jpg" alt="Copilot app generating an image of Mona wearing a yellow hardhat from a chat prompt" loading="lazy">
+    <figcaption>Changelog: Generate and edit images directly in Copilot. <a href="https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/">Source</a></figcaption>
+  </figure>
+  <p class="src">Source: <a href="https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/">Changelog: Generate and edit images</a> · <a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/#let-copilot-work-with-your-desktop-apps">Changelog: Desktop apps</a></p>
+</section>
+
+<section id="platform">
+  <h2>8. Platform &amp; workflow improvements</h2>
+  <ul>
+    <li>Workflow lockfiles and multi-cloud compute for reliability</li>
+    <li>Role-based moderation for GitHub Issues; issue artifacts</li>
+    <li>Pull request stacks</li>
+    <li>CLI attachments: images and video straight from the terminal</li>
+    <li>Webhook IP ranges documented in the Meta API</li>
+  </ul>
+  <p class="src">Source: <a href="https://github.blog/changelog/">GitHub Changelog</a></p>
+</section>
+
+<section id="enterprise">
+  <h2>9. Enterprise &amp; pricing</h2>
+  <ul>
+    <li>GitHub Enterprise reported to include Copilot features (app, automations, code review) without a separate Copilot subscription</li>
+    <li>Shift toward AI usage-based billing (AI credits) and per-user budgets; the individual Copilot Max plan offers more included credits</li>
+    <li>Plan for cost controls and budgets early</li>
+  </ul>
+  <figure class="shot" data-url="https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available/" data-img="https://github.blog/wp-content/uploads/2026/10/670134061-d348271e-500e-462e-bc2a-425313b7a32a.png">
+    <img src="assets/enterprise.png" alt="Budgets and alerts page listing per-user and enterprise AI credit budgets with spend and a scope filter" loading="lazy">
+    <figcaption>Changelog: Search and filter for budgets now available. <a href="https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available/">Source</a></figcaption>
+  </figure>
+</section>
+
+<section id="monday">
+  <h2>10. What to do Monday</h2>
+  <ol>
+    <li>Try the Copilot app with one real issue, end to end</li>
+    <li>Pilot one Automation on a low-risk chore</li>
+    <li>Enable AI push protection and try AI Scan on a non-CodeQL repo</li>
+    <li>Use Max review on one high-risk service</li>
+    <li>Review your Copilot billing and budgets</li>
+  </ol>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <ul>
+    <li><a href="https://github.blog/news-insights/company-news/github-universe-2026-evolving-every-layer-of-the-stack/">GitHub Blog — Universe 2026: Evolving every layer of the stack</a></li>
+    <li><a href="https://github.blog/changelog/2026-10-28-github-copilot-app-universe-releases/">Changelog — GitHub Copilot app, Universe releases</a></li>
+    <li><a href="https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/">Changelog — Copilot Fusion</a></li>
+    <li><a href="https://github.blog/changelog/2026-10-28-copilot-code-review-merge-with-confidence-with-max-and-approvals/">Changelog — Copilot code review: Max and approvals</a></li>
+    <li><a href="https://github.blog/changelog/2026-10-28-code-scanning-for-ai-applications-in-public-preview/">Changelog — Code scanning for AI applications (public preview)</a></li>
+    <li><a href="https://github.blog/changelog/2026-10-28-work-from-anywhere-with-a-new-connected-copilot-cloud-experience/">Changelog — Work from anywhere with a new connected Copilot cloud experience</a></li>
+    <li><a href="https://github.blog/changelog/2026-10-28-security-extension-for-the-github-copilot-app/">Changelog — Security extension for the GitHub Copilot app</a></li>
+    <li><a href="https://github.blog/changelog/2026-10-28-generate-and-edit-images-directly-in-copilot/">Changelog — Generate and edit images directly in Copilot</a></li>
+    <li><a href="https://github.blog/changelog/2026-06-01-updates-to-github-copilot-billing-and-plans/">Changelog — Updates to Copilot billing and plans</a></li>
+    <li><a href="https://github.blog/changelog/2026-10-13-search-and-filter-for-budgets-now-available/">Changelog — Search and filter for budgets</a></li>
+    <li><a href="https://github.blog/changelog/2026-10-28-github-copilot-in-jetbrains-universe-releases/">Changelog — Copilot in JetBrains, Universe releases</a></li>
+    <li><a href="https://github.com/events/universe/recap">GitHub Universe recap</a></li>
+  </ul>
+  <p class="src">*Availability labels are provisional. Availability, benchmark, and pricing claims remain subject to confirmation against the official sources linked above.</p>
+</section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
